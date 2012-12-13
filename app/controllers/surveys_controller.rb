@@ -2,7 +2,7 @@ class SurveysController < ApplicationController
   # GET /surveys
   # GET /surveys.json
   def index
-    @surveys = Survey.all
+    @surveys = Survey.search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb
